@@ -1,0 +1,20 @@
+.bg_1 {
+  background: url("../../assets/img/fancy-card/card-1.webp");
+}
+
+.bg_2 {
+  background: url("../../assets/img/fancy-card/card-2.webp");
+}
+
+.bg_2 {
+  background: url("../../assets/img/fancy-card/card-3.webp");
+}
+
+.transitionClass {
+  transition: all 0.3s linear;
+}
+
+.transitionClass:hover {
+  transform: translateY(-10px);
+  transition: all 0.3s linear;
+}

@@ -1,0 +1,25 @@
+.bg_1 {
+  background: url("../../assets/img/hero/home_hero_1.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  transition: background-size 0.3s ease-in-out;
+}
+
+.bg_1:hover {
+  background-size: 110%;
+  transition: background-size 0.3s ease-in-out;
+}
+
+.bg_2 {
+  background: url("../../assets/img/hero/home_hero_2.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  transition: background-size 0.3s ease-in-out;
+}
+
+.bg_2:hover {
+  background-size: 110%;
+  transition: background-size 0.3s ease-in-out;
+}

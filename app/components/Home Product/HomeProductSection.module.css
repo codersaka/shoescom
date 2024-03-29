@@ -1,0 +1,14 @@
+.afterEffect {
+  position: relative;
+}
+
+.afterEffect::after {
+  content: "";
+  left: 45%;
+  top: 50%;
+  position: absolute;
+  width: 1px;
+  height: 80%;
+  background: #7b7e83;
+  transform: translateY(-50%);
+}
