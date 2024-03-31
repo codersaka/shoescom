@@ -1,0 +1,42 @@
+.cardHover {
+  transition: all 0.4s ease-in-out;
+}
+
+.cardHover:hover {
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0 5px 50px rgba(0, 0, 0, 0.1);
+}
+
+.universalLink .dotsHover,
+.universalLink .hoverBottom {
+  transition: all 0.4s ease-in-out;
+  position: relative;
+}
+
+.universalLink .dotsHover {
+  transform: translateY(40px);
+}
+
+.universalLink .hoverBottom {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.universalLink .heart {
+  opacity: 0;
+  transform: translateY(-5px);
+  transition: all 0.4s ease-in-out;
+}
+
+.universalLink:hover .dotsHover,
+.universalLink:hover .hoverBottom {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: all 0.4s ease-in-out;
+}
+
+.universalLink:hover .heart {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: all 0.4s ease-in-out;
+}

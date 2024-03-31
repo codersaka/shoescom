@@ -31,7 +31,7 @@ function NonLogoNavComponent() {
 function Logonav() {
   return (
     <div className="p-2 w-40">
-      <Image src={Logo} />
+      <Image src={Logo} alt="site-logo" />
     </div>
   );
 }

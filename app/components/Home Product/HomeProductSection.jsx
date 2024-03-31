@@ -1,35 +1,46 @@
-import { FaArrowRight } from "react-icons/fa";
-
-import styles from "./HomeProductSection.module.css";
 import ProductCard from "../ProductCard/ProductCard";
 
-const HomeProductSection = () => {
+import styles from "./HomeProductSection.module.css";
+import { LinkHoverButton } from "../UIButtons/UIButtons";
+
+const HomeProductSection = async ({
+  sectionTitle,
+  sectionDesc,
+  hasLoadMoreButton,
+  productData,
+}) => {
   return (
     <section>
       <div className="flex justify-between items-center">
         <div
           className={`flex items-center justify-between w-[35%] ${styles.afterEffect}`}
         >
-          <h3 className="text-4xl font-bold ">New arrivals</h3>
-          <p className="font text-[#7b7e83]">
-            Our newly launched shoes collection.
-          </p>
+          <h3 className="text-4xl font-bold ">{sectionTitle}</h3>
+          <p className="font text-[#aeb9cb]">{sectionDesc}</p>
         </div>
-        <div className=" flex items-center justify-between py-3 px-4 border-2 border-[#7b7e83] text-[13px]">
-          <p className="mr-3 text-[#7b7e83]">Shop Collection</p>
-          <FaArrowRight size={12} color="#7b7e83" />
-        </div>
+        <LinkHoverButton
+          fontSize="text-[12px]"
+          buttonText="Shop Collection"
+          hasArrow={true}
+        />
       </div>
       <div className="my-8 flex flex-wrap content-between">
-        <ProductCard width="w-[24%]" />
-        <ProductCard width="w-[24%]" />
-        <ProductCard width="w-[24%]" />
-        <ProductCard width="w-[24%]" />
-        <ProductCard width="w-[24%]" />
-        <ProductCard width="w-[24%]" />
-        <ProductCard width="w-[24%]" />
-        <ProductCard width="w-[24%]" />
+        {productData.map((product) => (
+          <ProductCard
+            key={product.productId}
+            width="w-[24%]"
+            availableImages={product.availableImages}
+            productTitle={product.productTitle}
+            productBrand={product.produtBrand}
+            availableColor={product.availableColor}
+          />
+        ))}
       </div>
+      {hasLoadMoreButton && (
+        <div className=" w-[150px] m-auto">
+          <LinkHoverButton buttonText="LOAD MORE" hasArrow={false} />
+        </div>
+      )}
     </section>
   );
 };

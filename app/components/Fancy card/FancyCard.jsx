@@ -10,7 +10,7 @@ import { FaArrowRight } from "react-icons/fa";
 function Card({ text, link, bgImage }) {
   return (
     <div className={`relative w-[32%] ${styles.transitionClass}`}>
-      <Image src={bgImage} />
+      <Image src={bgImage} alt="shoe-image" />
       <div className="absolute w-[40%] left-3 top-[50%] -translate-y-[50%] text-white">
         <p className="font-bold text-3xl capitalize">{text}</p>
         <div className="flex items-center justify-between w-[50%] mt-3 text-sm uppercase">
